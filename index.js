@@ -77,3 +77,20 @@ const num =prompt('what is the number to format?  ');
 // console.log(typeof(num))
 numberFormatter(num)
 
+/* ++++++++++  4  +++++++++++++ */
+
+const cart = [
+  { name: "Laptop", price: 5000, qty: 1 },
+  { name: "Mouse", price: 500, qty: 2 },
+  { name: "Keyboard", price: 1500, qty: 1 }
+];
+let totalCartValue = 0;
+for (let i=0;i<cart.length;i++){
+    totalCartValue=totalCartValue + cart[i].price * cart[i].qty
+}
+console.log("solution 4")
+console.log("Total cart Value is : ", totalCartValue)
+if(totalCartValue>50000){
+    totalCartValue = totalCartValue-(totalCartValue * 0.1)
+}
+console.log("Total cart Value after discount is : ", totalCartValue)
