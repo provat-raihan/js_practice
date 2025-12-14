@@ -1,7 +1,7 @@
-// let x= 5;
-// for (let i = 0;i<5;i++){
-//     console.log("this is ", i)
-// }
+// // let x= 5;
+// // for (let i = 0;i<5;i++){
+// //     console.log("this is ", i)
+// // }
 
 /* ++++++++++  1  +++++++++++++ */
 
@@ -94,3 +94,131 @@ if(totalCartValue>50000){
     totalCartValue = totalCartValue-(totalCartValue * 0.1)
 }
 console.log("Total cart Value after discount is : ", totalCartValue)
+
+/* ++++++++++  5  +++++++++++++ */
+
+const attendance = ["P", "A", "P", "P", "A", "P","P","P"];
+function attendanceCounter(attendenceArray){
+    let absentCount = 0
+    let presentCount = 0
+        if(Array.isArray(attendenceArray)){
+            for (value of attendenceArray){
+                if(value==="P"){
+                    presentCount++
+                } else if (value==="A"){
+                    absentCount++
+                } else{
+                    console.log("There is invalid data in the attendence")
+                }
+            }
+        }
+        else {
+            console.log("please provide an array")
+        }
+         if(((presentCount/(presentCount+absentCount))*100)>=75){
+            return "Eligible"
+         }
+         else{
+            return "Not Eligible"
+         }
+    }
+
+console.log("The student is: ",attendanceCounter(attendance))
+
+ /* ++++++++++  6  +++++++++++++ */
+
+ const orders = [
+  "pending",
+  "delivered",
+  "pending",
+  "cancelled",
+  "delivered",
+  "pending",
+  "new"
+];
+
+const unique=Array.from(new Set(orders))
+const itemObject = {};
+// console.log(unique)
+unique.forEach((value)=>itemObject[value]=0)
+const keys=Object.keys(itemObject)
+    for(val of orders){
+        if(keys.includes(val)){
+            itemObject[val]++
+        }
+    }
+console.log("Solution 6: ",itemObject)
+
+/* ++++++++++  7  +++++++++++++ */
+
+// const prompt = require('prompt-sync')();
+const passwordToCheck = prompt('Enter Password:');
+function passwordStrengthChecking(password){
+    lowerCasePassword=password.toLowerCase();
+    function doesContainNumber(password){
+        for(let i=0;i<password.length;i++){
+            if (!(Number.isNaN(Number(password[i])))){
+                return true
+            }
+        }
+    }
+    console.log(doesContainNumber(password))
+    
+    if(lowerCasePassword!=password && password.length>=8 && doesContainNumber(password)===true){
+        return "Strong"
+    } else {
+        return "Weak"
+    }
+}
+console.log("solution 7 : ",passwordStrengthChecking(passwordToCheck))
+
+/* ++++++++++  8  +++++++++++++ */
+
+const transactions = [500, -200, 1000, -300, -100];
+let totalBalance = 0;
+let totalIncome=0;
+let totalExpense=0;
+for (val of transactions){
+    totalBalance=totalBalance+val
+    if(val<0){
+        totalExpense=totalExpense-val
+    } else{
+        totalIncome=totalIncome+val
+    }
+}
+console.log("solution 8 :")
+console.log("Total Balance is : ",totalBalance)
+console.log("Total Income is : ",totalIncome)
+console.log("Total Expense is : ",totalExpense)
+
+/* ++++++++++  9  +++++++++++++ */
+const inventory = [
+  { item: "Rice", stock: 20 },
+  { item: "Oil", stock: 5 },
+  { item: "Sugar", stock: 12 }
+];
+function inventoryAlert(inventory){
+    let lowerInventories ="\n"
+    for(val of inventory){
+        if(val.stock<10){
+            lowerInventories=lowerInventories+val.item+"\n"
+        }
+    }
+    return lowerInventories;
+}
+
+console.log("solution 9 :",inventoryAlert(inventory))
+
+/* ++++++++++  10  +++++++++++++ */
+// const appointments = [
+//   { start: "10:00", end: "11:00" },
+//   { start: "11:30", end: "12:30" }
+// ];
+// const startTime = prompt('Enter Start time:');
+// const endTime = prompt('Enter End time:');
+// const appointment={start:startTime,end:endTime}
+// console.log(appointment)
+// function appointmentChecker(appointment,appointments){
+    
+// }
+
