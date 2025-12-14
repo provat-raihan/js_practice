@@ -1,0 +1,165 @@
+1. Daily Expense Tracker
+
+You receive an array of daily expenses.
+
+const expenses = [120, 45, 300, 180, 90];
+
+
+Task:
+
+Calculate total expense
+
+Calculate average expense
+
+Find the highest expense
+
+2. Login Validation
+
+A user enters username and password.
+
+const users = [
+  { username: "admin", password: "1234" },
+  { username: "user", password: "abcd" }
+];
+
+
+Task:
+
+Write a function that takes username & password
+
+Return "Login successful" or "Invalid credentials"
+
+3. Phone Number Formatter
+
+User enters digits only:
+
+"01712345678"
+
+
+Task:
+Format it like:
+
++880-171-234-5678
+
+🟡 Level 2 – Logic & Arrays
+4. Shopping Cart Total
+
+Each product has price and quantity.
+
+const cart = [
+  { name: "Laptop", price: 50000, qty: 1 },
+  { name: "Mouse", price: 500, qty: 2 },
+  { name: "Keyboard", price: 1500, qty: 1 }
+];
+
+
+Task:
+
+Calculate total cart value
+
+Apply 10% discount if total > 50,000
+
+5. Attendance Percentage
+
+Student attendance data:
+
+const attendance = ["P", "A", "P", "P", "A", "P"];
+
+
+Task:
+
+Calculate attendance percentage
+
+Return "Eligible" if ≥ 75%, else "Not Eligible"
+
+6. Order Status Counter
+
+Orders from an e-commerce system:
+
+const orders = [
+  "pending",
+  "delivered",
+  "pending",
+  "cancelled",
+  "delivered",
+  "pending"
+];
+
+
+Task:
+Return an object like:
+
+{
+  pending: 3,
+  delivered: 2,
+  cancelled: 1
+}
+
+🟠 Level 3 – Functions & Real Logic
+7. Password Strength Checker
+
+User enters a password.
+
+Rules:
+
+At least 8 characters
+
+Contains number
+
+Contains uppercase letter
+
+Task:
+Return "Strong" or "Weak"
+
+8. Bank Transaction Summary
+
+Transactions array:
+
+const transactions = [500, -200, 1000, -300, -100];
+
+
+Task:
+
+Total balance
+
+Total income
+
+Total expense
+
+🔴 Level 4 – Thinking Like a Developer
+9. Inventory Low Stock Alert
+
+Inventory data:
+
+const inventory = [
+  { item: "Rice", stock: 20 },
+  { item: "Oil", stock: 5 },
+  { item: "Sugar", stock: 12 }
+];
+
+
+Task:
+
+Return items with stock less than 10
+
+Output item names only
+
+10. Appointment Conflict Checker
+
+Appointments in 24-hour format:
+
+const appointments = [
+  { start: "10:00", end: "11:00" },
+  { start: "11:30", end: "12:30" }
+];
+
+
+Task:
+
+Write a function that takes a new appointment
+
+Return true if it conflicts, otherwise false
+
+Example input:
+
+{ start: "10:30", end: "11:15" }
