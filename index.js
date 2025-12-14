@@ -8,7 +8,7 @@
 const expenses = [120, 45, 300, 180, 90];
 
 expenses.sort((a,b)=>b-a)
-console.log("The highest expense in the array is : ",expenses[0])
+console.log("solution 1","The highest expense in the array is : ",expenses[0])
 
 let total = 0;
 let i=0
@@ -35,16 +35,16 @@ function loginVerification(username,password){
         console.log("Invalid credentials")
     }
 }
-
+console.log("solution 2")
 loginVerification(users[0].username,users[0].password)
 loginVerification(users[1].username,users[1].password)
 loginVerification(users[0].username,users[1].password) // should print invalid
 
 const prompt = require('prompt-sync')();
-// const username = prompt('What is your username? ');
-// const password = prompt('What is your password? ');
-// loginVerification(username,password)
-// // this is from user input
+const username = prompt('What is your username? ');
+const password = prompt('What is your password? ');
+loginVerification(username,password)
+// this is from user input
 
 
 /* ++++++++++  3  +++++++++++++ */
@@ -72,7 +72,8 @@ function numberFormatter(num){
     }
     
 }
+console.log("solution 3")
 const num =prompt('what is the number to format?  ');
-console.log(typeof(num))
+// console.log(typeof(num))
 numberFormatter(num)
 
