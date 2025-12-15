@@ -236,7 +236,7 @@ function appointmentChecker(appointment,bookedTime){
 }
 function timeFormatter(time){
     let hr ;
-    let min;C
+    let min;
     let splitTime=time.split(":")
     for(let i=0;i<splitTime.length;i++){
         if(i==0){
