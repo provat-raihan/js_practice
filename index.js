@@ -1,23 +1,19 @@
-// // let x= 5;
-// // for (let i = 0;i<5;i++){
-// //     console.log("this is ", i)
-// // }
+
 
 /* ++++++++++  1  +++++++++++++ */
 
 const expenses = [120, 45, 300, 180, 90];
 
 expenses.sort((a,b)=>b-a)
-console.log("solution 1","The highest expense in the array is : ",expenses[0])
 
 let total = 0;
 let i=0
 for (;i<expenses.length;i++){
     total= total+ expenses[i]
 }
-console.log("the total expense is :",total)
-// console.log(i)
-console.log("the  average is :",(total/i))
+// console.log("solution 1","The highest expense in the array is : ",expenses[0])
+// console.log("the total expense is :",total)
+// console.log("the  average is :",(total/i))
 
 /* ++++++++++  2  +++++++++++++ */
 
@@ -35,15 +31,14 @@ function loginVerification(username,password){
         console.log("Invalid credentials")
     }
 }
-console.log("solution 2")
-loginVerification(users[0].username,users[0].password)
-loginVerification(users[1].username,users[1].password)
-loginVerification(users[0].username,users[1].password) // should print invalid
+// console.log("solution 2")
+// loginVerification(users[0].username,users[0].password)
+// loginVerification(users[1].username,users[1].password)
+// loginVerification(users[0].username,users[1].password) // should print invalid
 
-const prompt = require('prompt-sync')();
-const username = prompt('What is your username? ');
-const password = prompt('What is your password? ');
-loginVerification(username,password)
+const username = "admin"
+const password = "1234"
+// loginVerification(username,password)
 // this is from user input
 
 
@@ -56,10 +51,8 @@ function numberFormatter(num){
     if(Number.isNaN(Number(num))){
         console.log("please provide a number")
     }else{
-        // stringNum=num.toString();
     if(num.length==11){
         let formatNumber = "+88"+ num;
-        // console.log(formatNumber)
         let firstPart =formatNumber.slice(0,4)
         let secondPart =formatNumber.slice(4,7)
         let thirdPart =formatNumber.slice(7,10)
@@ -72,10 +65,9 @@ function numberFormatter(num){
     }
     
 }
-console.log("solution 3")
-const num =prompt('what is the number to format?  ');
-// console.log(typeof(num))
-numberFormatter(num)
+const num = '01521331717';
+// console.log("solution 3")
+// numberFormatter(num)
 
 /* ++++++++++  4  +++++++++++++ */
 
@@ -88,12 +80,12 @@ let totalCartValue = 0;
 for (let i=0;i<cart.length;i++){
     totalCartValue=totalCartValue + cart[i].price * cart[i].qty
 }
-console.log("solution 4")
-console.log("Total cart Value is : ", totalCartValue)
 if(totalCartValue>50000){
     totalCartValue = totalCartValue-(totalCartValue * 0.1)
 }
-console.log("Total cart Value after discount is : ", totalCartValue)
+// console.log("solution 4")
+// console.log("Total cart Value is : ", totalCartValue)
+// console.log("Total cart Value after discount is : ", totalCartValue)
 
 /* ++++++++++  5  +++++++++++++ */
 
@@ -123,7 +115,7 @@ function attendanceCounter(attendenceArray){
          }
     }
 
-console.log("The student is: ",attendanceCounter(attendance))
+// console.log("The student is: ",attendanceCounter(attendance))
 
  /* ++++++++++  6  +++++++++++++ */
 
@@ -139,7 +131,6 @@ console.log("The student is: ",attendanceCounter(attendance))
 
 const unique=Array.from(new Set(orders))
 const itemObject = {};
-// console.log(unique)
 unique.forEach((value)=>itemObject[value]=0)
 const keys=Object.keys(itemObject)
     for(val of orders){
@@ -147,12 +138,11 @@ const keys=Object.keys(itemObject)
             itemObject[val]++
         }
     }
-console.log("Solution 6: ",itemObject)
+// console.log("Solution 6: ",itemObject)
 
 /* ++++++++++  7  +++++++++++++ */
 
-// const prompt = require('prompt-sync')();
-const passwordToCheck = prompt('Enter Password:');
+const passwordToCheck = "1111111aaaaAAA";
 function passwordStrengthChecking(password){
     lowerCasePassword=password.toLowerCase();
     function doesContainNumber(password){
@@ -162,15 +152,21 @@ function passwordStrengthChecking(password){
             }
         }
     }
-    console.log(doesContainNumber(password))
+    function doesContainAlphabet(password){
+        for(let i=0;i<password.length;i++){
+            if (Number.isNaN(Number(password[i]))){
+                return true
+            }
+        }
+    }
     
-    if(lowerCasePassword!=password && password.length>=8 && doesContainNumber(password)===true){
+    if(lowerCasePassword!=password && password.length>=8 && doesContainNumber(password)===true && doesContainAlphabet(password)===true){
         return "Strong"
     } else {
         return "Weak"
     }
 }
-console.log("solution 7 : ",passwordStrengthChecking(passwordToCheck))
+// console.log("solution 7 : ",passwordStrengthChecking(passwordToCheck))
 
 /* ++++++++++  8  +++++++++++++ */
 
@@ -186,12 +182,13 @@ for (val of transactions){
         totalIncome=totalIncome+val
     }
 }
-console.log("solution 8 :")
-console.log("Total Balance is : ",totalBalance)
-console.log("Total Income is : ",totalIncome)
-console.log("Total Expense is : ",totalExpense)
+// console.log("solution 8 :")
+// console.log("Total Balance is : ",totalBalance)
+// console.log("Total Income is : ",totalIncome)
+// console.log("Total Expense is : ",totalExpense)
 
 /* ++++++++++  9  +++++++++++++ */
+
 const inventory = [
   { item: "Rice", stock: 20 },
   { item: "Oil", stock: 5 },
@@ -207,18 +204,49 @@ function inventoryAlert(inventory){
     return lowerInventories;
 }
 
-console.log("solution 9 :",inventoryAlert(inventory))
+// console.log("solution 9 :",inventoryAlert(inventory))
 
 /* ++++++++++  10  +++++++++++++ */
-// const appointments = [
-//   { start: "10:00", end: "11:00" },
-//   { start: "11:30", end: "12:30" }
-// ];
-// const startTime = prompt('Enter Start time:');
-// const endTime = prompt('Enter End time:');
-// const appointment={start:startTime,end:endTime}
-// console.log(appointment)
-// function appointmentChecker(appointment,appointments){
-    
-// }
 
+const appointments = [
+  { start: "10:00", end: "11:00" },
+  { start: "11:30", end: "12:30" }
+];
+const appointment={ start: "09:30", end: "10:01" }
+
+const bookedTime =[];
+for(val of appointments){
+   
+   bookedTime.push([timeFormatter(val.start) , timeFormatter(val.end)])
+
+    }
+
+function appointmentChecker(appointment,bookedTime){
+    let conflict= false ;
+   const appointmentStartTime=timeFormatter(appointment.start)
+   const appointmentEndTime=timeFormatter(appointment.end)
+   for(let i =0;i<bookedTime.length;i++){
+    if((bookedTime[i][0]<appointmentStartTime && appointmentStartTime<bookedTime[i][1]) || (bookedTime[i][0]<appointmentEndTime && appointmentEndTime<bookedTime[i][1])){
+      return  conflict=true
+    }
+    else{
+        return conflict
+    }
+   }
+}
+function timeFormatter(time){
+    let hr ;
+    let min;C
+    let splitTime=time.split(":")
+    for(let i=0;i<splitTime.length;i++){
+        if(i==0){
+            hr=Number(splitTime[i])*60;
+        }
+        if(i==1){
+            min=Number(splitTime[i])
+        }
+    }
+    return hr+min;
+
+}
+// console.log("Solution 10:","does the appointment conflict?: ",appointmentChecker(appointment,bookedTime))
